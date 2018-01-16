@@ -5,7 +5,12 @@ body {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
 	display: inline-flex;
+	justify-content: center;
+	
+	width: 100%;
+	height: 100%;
 }
 
 /* HeadBlock incl. Logo and Navigation */
@@ -14,20 +19,26 @@ header {
   position: fixed;
   margin: 0 auto;
   width: 100%;
-  height: 80px;
+  height: 79px;
 
+  background-color: white;
+  border-bottom: 1px solid #000;
+  
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.innerHeader {
+  display: flex;
   align-items: center;
   z-index: 10;
+  
+  width: 85%;
   
   font-family: Verdana;
   font-size: 14px;
   font-weight: bold;
   color: MediumAquamarine;
-  
-  background-color: white;
-  border-bottom: 1px solid #000;
 }
 header a {
   color: black;
@@ -43,6 +54,7 @@ header a {
 }
 nav {
   display: inline-flex;
+  justify-content: flex-end;
   flex-grow: 1;
 }
 nav span {
@@ -52,9 +64,10 @@ nav span {
 /* MainSite with 3 columns */
 
 #main {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  margin-top: 81px;
+  margin-top: 80px;
+  width: 85%;
 }
 .column {
   display: flex;
@@ -69,19 +82,49 @@ nav span {
 .column.small {
   width: 240px;
 }
-.mainNews {
+
+  /* titleNews */
+  .titleNews {
   
-}
-.mainNewsImage {
-  background-image: url(../images/img-story-main.png);
-  height: 300px;
-}
-.mainNewsImageText {
-  font-size: 40px;
-}
-.mainNewsContent {
-  padding: 20px 0px;
-}
+  }
+  .titleNewsImage {
+    background-image: url(../images/img-story-main.png);
+    height: 300px;
+  }
+  .titleNewsImageText {
+    font-size: 40px;
+  }
+  .titleNewsContent {
+    padding: 20px 0px;
+  }
+  
+  /* mainNews following titleNews */
+  .mainNewsImage_01 {
+    height: 300px;
+    background-image: url(../images/img-story-2.png);
+  }
+  .mainNewsImage_02 {
+    height: 300px;
+    background-image: url(../images/img-story-3.png);
+  }
+  .mainNewsContent {
+    
+  }
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+  }
+  
+  /* centerNews */
+  .centerNewsImage_01 {
+    height: 300px;
+    background-image: url(../images/img-story-1.png);
+  }
+  
+  /* sideNews */
+  
+  
   /* fonts */
   .story {
     font-family: Georgia;
@@ -93,8 +136,10 @@ nav span {
     font-weight: bold;
     font-size: 30px;
     color: white;
+    text-align: center;
   }
   
+/* Footer */
   
 /* DEBUG */
 .border {
