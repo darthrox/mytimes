@@ -1,21 +1,33 @@
 body {
-  margin: 0 auto;
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	display: inline-flex;
 }
+
+/* HeadBlock incl. Logo and Navigation */
+
 header {
   position: fixed;
   margin: 0 auto;
   width: 100%;
+  height: 80px;
 
-  
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  
   font-family: Verdana;
   font-size: 14px;
   font-weight: bold;
   color: MediumAquamarine;
-  border: 1px solid #000;
+  
+  background-color: white;
+  border-bottom: 1px solid #000;
 }
 header a {
   color: black;
@@ -26,14 +38,36 @@ header a {
   flex-grow: 3;
 
 }
-.logo span {
-  padding: 10px 20px;
+.logo span, img {
+  padding: 10px 10px;
 }
-
 nav {
   display: inline-flex;
   flex-grow: 1;
 }
 nav span {
   padding: 20px; 10px;
+}
+
+/* MainSite with 3 columns */
+
+#main {
+  display: inline-flex;
+  justify-content: space-around;
+  margin-top: 81px;
+}
+
+.column.large {
+  width: 630px;
+  border: 1px solid #F00;
+}
+
+.column.medium {
+  width: 300px;
+    border: 1px solid #0F0;
+}
+
+.column.small {
+  width: 240px;
+  border: 1px solid #00F;
 }
